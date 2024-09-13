@@ -8,7 +8,8 @@ public class debugging {
         Scanner sc = new Scanner(System.in);
         int testcase = sc.nextInt();
         int answer = 0;
-        int A[] = new int[100001];
+        //자료형 범위 오류
+        int A[] = new int[100001]; 
         int S[] = new int[100001];
         for(int i = 1; i<10000; i++){ //반복문 인덱스 범위 지정 오류
             A[i] = (int)(Math.random()*Integer.MAX_VALUE);
@@ -21,7 +22,7 @@ public class debugging {
                 int start = sc.nextInt();
                 int end = sc.nextInt();
                 answer += S[end] - S[start - 1];
-                System.out.println(testcase + " " + answer);
+                System.out.println(testcase + " " + answer); //잘못된 변수 사용오류
             }
         }
         sc.close();
